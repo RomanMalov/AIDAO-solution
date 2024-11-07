@@ -1,5 +1,7 @@
 # AIDAO-solution
 
+The following is the instructions I've got on the olympiad.
+
 Short review of fMRI
 Functional Magnetic Resonance Imaging (fMRI) is a neuroimaging technique used to study brain activity by measuring changes in blood flow. Unlike standard MRI, which generates static images of brain anatomy, fMRI captures dynamic changes in neural activity over time. It does so by leveraging the Blood Oxygen Level-Dependent (BOLD) signal, which varies based on the oxygenation of hemoglobin. When neurons are active, they consume more oxygen, resulting in changes in the magnetic properties of hemoglobin. These changes can be detected and visualized by fMRI, allowing researchers to observe which areas of the brain are active in response to specific stimuli or tasks.
 
@@ -19,14 +21,14 @@ Data overview:
 You are provided with unlabeled data for which labeling is to be computed. There are 20 subjects of fMRI scan in total, for each subject there are 16 (2x2x2x2) representations corresponding to – two different brain atlas partitions (Brainnetome and Schaefer200), times two different smoothing strategies, times two segments of scan sequence, times two different sequences. Shape structure for the dataset translates aas follows [20*16 objects, 10 timesteps from scan sequence, 246 number of features in larger atlas]. Note that since two atlases with different number of partitions are used, some data arrays are padded with np.nans, so that data shape is uniform.
 
 Public Test Data:
-
 IHB dataset: 10 subject
+
 Private Test Data:
-
 IHB dataset: 10 subjects
-File with all 20×16 scan data representations is available via this repository lfs. More details can be found here.
 
-Objective
+File with all 20×16 scan data representations is available in ihb.py.
+
+Objective.
 The task aims to simulate a realistic research workflow:
 
 Data Collection Constraints: Collecting fMRI data is challenging and costly, resulting in small proprietary datasets.
@@ -37,12 +39,9 @@ Evaluation Metric: Adjusted Rand Score (rescaled to be between 0.0 for random pr
 Required Deliverables: - <name>.csv submission file that contains column named prediction which has same integer labels for objects corresponding to same class (subject's fMRI scan).
 
 Output format
-Please upload your predictions into the system in the .csv format. The ﬁle has to contain at least a column named prediction and only this column would be considered by automatic checker.
+Upload your predictions into the system in the .csv format. The ﬁle has to contain at least a column named prediction and only this column would be considered by automatic checker.
 
-A sample submission can be found on GitHub.
-
-Notes
-References
+References:
 
 Lee, J., & Lee, J.-H. (2024). Discovering individual fingerprints in resting-state functional connectivity using deep neural networks. Human Brain Mapping, 45(1), e26561.
 https://doi.org/10.1002/hbm.26561
