@@ -24,11 +24,7 @@ IHB dataset: 10 subject
 Private Test Data:
 
 IHB dataset: 10 subjects
-File with all 
-Unexpected text node: '
-                            
-                        '
-20×16 scan data representations is available via this repository lfs. More details can be found here.
+File with all 20×16 scan data representations is available via this repository lfs. More details can be found here.
 
 Objective
 The task aims to simulate a realistic research workflow:
